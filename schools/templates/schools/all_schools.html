@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block title %}<title>All Schools</title>{% endblock  %}
+
+{% block content %}
+<h1>All Instittutions Will be displayed here!</h1>
+
+
+
+    {% for sch in schools %}
+    
+        <a href="{% url 'apart' sch.id %}"><h3>{{sch.name}}</h3></a>
+        {% comment %} <a href=""><h3>{{sch.county}}</h3></a> {% endcomment %}
+  
+    {% endfor %}
+
+
+{% endblock  %}

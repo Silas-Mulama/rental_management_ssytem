@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block title %}<title>All Apartments</title>{% endblock  %}
+
+{% block content %}
+<h1>All Apartments per Institution Will be displayed here!</h1>
+{% for aprt in apartments  %}
+    <h2>{{aprt.name}}</h2>
+    <p>{{aprt.description}}</p>
+    <p>Rent Amount/Month: <b>Ksh. {{aprt.rent}}/=</b></p>
+    <hr>
+{% endfor %}
+{% endblock  %}
